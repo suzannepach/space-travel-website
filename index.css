@@ -129,16 +129,6 @@ select {
     border: 0;
   }
 
-/* Colors */
-
-.bg-dark { background-color: hsl( var(--clr-dark));}
-.bg-accent { background-color: hsl( var(--clr-light));}
-.bg-white { background-color: hsl( var(--clr-white));}
-
-.text-dark { color: hsl( var(--clr-dark));}
-.text-accent { color: hsl( var(--clr-light));}
-.text-white { color: hsl( var(--clr-white));}
-
 /* colors */
 
 .bg-dark { background-color: hsl( var(--clr-dark) );}
