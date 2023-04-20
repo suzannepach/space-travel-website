@@ -219,6 +219,7 @@ select {
 
 .primary-navigation {
     --gap: 8em;
+    --underline-gap: 2rem;
     list-style: none;
     padding: 0;
     margin: 0;
@@ -233,6 +234,25 @@ select {
     font-weight: 700;
 }
 
-.unline-indicators > * {
-    
+.underline-indicators > * {
+    cursor: pointer;
+    padding: var(--underline-gap, 1rem) 0;
+    border: 0;
+    border-bottom: .2rem solid hsl( var(--clr-white) / 0 );
 }
+
+.underline-indicators > *:hover,
+.underline-indicators > *:focus {
+    border-color: hsl( var(--clr-white) / .50);
+}
+
+.underline-indicators > .active, 
+.underline-indicators > [aria-selected="true"] {
+    color: hsl( var(--clr-white) / 1);
+    border-color: hsl( var(--clr-white) / 1);
+}
+
+.tab-list {
+    --gap: 2em;
+}
+
