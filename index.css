@@ -241,8 +241,16 @@ select {
     border-bottom: .2rem solid hsl( var(--clr-white) / 0 );
 }
 
-.underline-indicators > *:hover,
-.underline-indicators > *:focus {
+/* .underline-indicators > *:hover,
+.underline-indicators > *:focus
+Combining the star with hover like above works in Scrimba and codepen,
+but it doesn't work in any browser I try, 
+so I have directly selected the li and button elements instead: */
+.underline-indicators > li:hover,
+.underline-indicators > li:focus, 
+.underline-indicators > button:hover,
+.underline-indicators > button:focus
+{
     border-color: hsl( var(--clr-white) / .50);
 }
 
