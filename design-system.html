@@ -10,7 +10,7 @@
     </head>
     <body>
         
-        <div class="container">
+        <div class="container" style="max-width: 70rem;">
             <h1 class="uppercase">Design system</h1>
 
             <section id="colors" style="margin: 4rem 0">
@@ -90,7 +90,7 @@
 
             </section>
 
-            <section class="flow" id="interactive-elements">
+            <section class="flow grid" id="interactive-elements" style="justify-items: center;"> 
                 <h2 class="numbered-title"><span>03</span> Interactive elements</h2>
                 
                 <!-- navigation -->
@@ -102,13 +102,13 @@
                     </nav>
                 </div>
 
-                <div class="flex">
-                    <div style="margin-top: 5rem">
+                <div class="flex" style="width: 100%; justify-content: space-between;">
+                    <div style="margin: 2.75em;">
                         <!-- explore button -->
                         <a href="#" class="large-button bg-white text-dark fs-600 ff-serif uppercase">Explore</a>
                     </div>
 
-                    <div style="margin-bottom: 50vh">
+                    <div class="flow grid" style="margin-bottom: 50vh; --flow-space: 4rem; justify-items: center;">
                         <!-- Tabs -->
                         <div class="tab-list underline-indicators flex">
                             <button aria-selected="true" class="uppercase text-accent bg-dark fs-300 ff-sans-cond text-white letter-spacing-2">Moon</button>
@@ -116,9 +116,17 @@
                             <button aria-selected="false" class="uppercase text-accent bg-dark fs-300 ff-sans-cond text-white letter-spacing-2">Europe</button>
                         </div>
                         <!-- Dots -->
-                        
+                        <div class="dot-indicators flex">
+                            <button aria-selected="true"><span class="sr-only">Slide title</span></button>
+                            <button aria-selected="false"><span class="sr-only">Slide title</span></button>
+                            <button aria-selected="false"><span class="sr-only">Slide title</span></button>
+                        </div>
                         <!-- Numbers -->
-                        
+                        <div class="number-indicators grid">
+                            <button class="fs-600 ff-serif text-white bg-dark" aria-selected="true">1</button>
+                            <button class="fs-600 ff-serif text-white bg-dark" aria-selected="false">2</button>
+                            <button class="fs-600 ff-serif text-white bg-dark" aria-selected="false">3</button>
+                        </div>
                     </div>
 
                 </div>
@@ -126,5 +134,6 @@
 
         </div>
         
+        <script src="index.pack.js"></script>
     </body>
 </html>
