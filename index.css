@@ -121,6 +121,20 @@ select {
     max-width: 80rem;
 }
 
+.grid-container {
+    display: grid;
+    grid-template-columns: minmax(2rem,1fr) repeat(2, minmax(0, 40rem)) minmax(2rem,1fr);
+    column-gap: var(--container-gap,);
+}
+
+.grid-container > *:first-child {
+    grid-column: 2;
+}
+
+.grid-container > *:last-child {
+    grid-column: 3;
+}
+
 .sr-only {
     position: absolute;
     width: 1px;
@@ -190,7 +204,7 @@ select {
 
 .large-button {
     position: relative;
-    display: grid;
+    display: inline-grid;
     z-index: 1;
     place-items: center;
     padding: 0 2em;
@@ -249,7 +263,7 @@ so I have directly selected the li and button elements instead: */
 .underline-indicators > li:hover,
 .underline-indicators > li:focus, 
 .underline-indicators > button:hover,
-.underline-indicators > button:focus
+.underline-indicators > button:focus 
 {
     border-color: hsl( var(--clr-white) / .50);
 }
