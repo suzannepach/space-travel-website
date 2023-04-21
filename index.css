@@ -16,7 +16,7 @@
     --fs-500: 1.75rem;
     --fs-400: 0.9375rem;
     --fs-300: 1rem;
-    --fs-200: 0.875rem;
+    --fs-200: 0.875rem;    
     
     /* font-families */
     --ff-serif: "Bellefair", serif;
@@ -27,7 +27,6 @@
 @media (min-width: 35em) {
     :root {
         /* font-sizes */
-        --fs-900: 9.375rem;
         --fs-800: 5rem;
         --fs-700: 2.5rem;
         --fs-600: 1.5rem;
@@ -135,6 +134,10 @@ select {
     gap: var(--gap, 1rem);
 }
 
+.d-block {
+    display: block;
+}
+
 .flow > *:where(:not(:first-child)) {
     margin-top: var(--flow-space, 1rem);
 }
@@ -152,7 +155,7 @@ select {
 @media (min-width: 45rem) {
     .grid-container {
         grid-template-columns: minmax(2rem,1fr) repeat(2, minmax(0, 40rem)) minmax(2rem,1fr);
-        column-gap: var(--container-gap,);
+        column-gap: var(--container-gap,2rem);
     }
 
     .grid-container > *:first-child {
