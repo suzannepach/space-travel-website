@@ -91,6 +91,8 @@ body {
 
     display: grid;
     grid-template-rows: min-content 1fr;
+
+    overflow-x: hidden;
 }
 
 /* Make images easier to work with */
@@ -278,11 +280,54 @@ select {
 }
 
 .primary-navigation {
-    --gap: 8em;
     --underline-gap: 2rem;
     list-style: none;
     padding: 0;
     margin: 0;
+    background: hsl( var(--clr-dark) / 0.95);
+    /* backdrop-filter: blur(1.5rem); */
+}
+
+.mobile-nav-toggle {
+    display: none;
+}
+
+@supports (backdrop-filter: blur(1.5rem)) {
+    .primary-navigation {
+        background: hsl( var(--clr-white) / 0.05);
+        backdrop-filter: blur(1.5rem);
+        transform: translateX(100%);
+    }
+
+    .mobile-nav-toggle {
+        display: block;
+        position: absolute;
+        z-index: 2000;
+        right: 1rem;
+        top: 2rem;
+        background: transparent;
+        background-image: url(./assets/shared/icon-hamburger.svg);
+        background-repeat: no-repeat;
+        width: 1.5rem;
+        aspect-ratio: 1;
+        border: 0;
+    }
+}
+
+@media (max-width: 35rem) {
+    .primary-navigation {
+        --underline-gap: .5rem;
+        position: fixed;
+        z-index: 1000;
+        inset: 0 0 0 30%;
+        list-style: none;
+        padding: min(20rem, 15vh) 2rem;
+        margin: 0;
+        flex-direction: column;
+    }
+    .primary-navigation.underline-indicators > .active {
+        border: 0;
+    }
 }
 
 .primary-navigation a {
@@ -373,7 +418,7 @@ so I have directly selected the button elements instead: */
 }
 
 /* ------------------------------------------ */
-/*  Page specific background                            */
+/*  Page specific background                  */
 /* ------------------------------------------ */
 
 body {
@@ -398,3 +443,4 @@ body {
         background-image: url(./assets/home/background-home-desktop.jpg);
     }
 }
+
