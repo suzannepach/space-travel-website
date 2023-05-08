@@ -152,38 +152,6 @@ select {
     max-width: 80rem;
 }
 
-.grid-container {
-    display: grid;
-    text-align: center;
-    place-items: center;
-    padding-inline: 1rem;
-}
-
-.grid-container * {
-    max-width: 50ch;
-}
-
-@media (min-width: 45rem) {
-    .grid-container {
-        text-align: left;
-        grid-template-columns: minmax(1rem,1fr) repeat(2, minmax(0, 40rem)) minmax(1rem,1fr);
-        column-gap: var(--container-gap,2rem);
-    }
-
-    .grid-container > *:first-child {
-    grid-column: 2;
-    }
-
-    .grid-container > *:last-child {
-        grid-column: 3;
-    }
-
-    .grid-container--home {
-        padding-bottom: max(6rem, 20vh);
-        align-items: end;
-    }
-}
-
 .sr-only {
     position: absolute;
     width: 1px;
@@ -526,3 +494,74 @@ body {
     }
 }
 
+/* ----------------------------- */
+/* Layout                        */
+/* ----------------------------- */
+.grid-container {
+    display: grid;
+    text-align: center;
+    place-items: center;
+    padding-inline: 1rem;
+    padding-bottom: 4rem;
+}
+
+.grid-container * {
+    max-width: 50ch;
+}
+
+.numbered-title {
+    grid-area: title;
+}
+
+/* Ddestination layout */
+
+.grid-container--destination {
+    --flow-space: 2rem;
+    grid-template-areas: 
+        'title'
+        'image'
+        'tabs'
+        'content';
+}
+
+.grid-container--destination > img {
+    grid-area: image;
+    max-width: 60%;
+}
+
+.grid-container--destination > .tab-list {
+    grid-area: tabs;
+}
+
+.grid-container--destination > .destination-info {
+    grid-area: content;
+}
+
+.destination-meta {
+    flex-direction: column;
+    align-items: center;
+    border-top: 1px solid hsl( var(--clr-white) / .2 );
+    padding-top: 2.5rem;
+    margin-top: 2.5rem;
+}
+
+@media (min-width: 45rem) {
+    .grid-container {
+        text-align: left;
+        grid-template-columns: minmax(1rem,1fr) repeat(2, minmax(0, 40rem)) minmax(1rem,1fr);
+        column-gap: var(--container-gap,2rem);
+    }
+
+    .grid-container > *:first-child {
+    grid-column: 2;
+    }
+
+    .grid-container > *:last-child {
+        grid-column: 3;
+    }
+
+    .grid-container--home {
+        padding-bottom: max(6rem, 20vh);
+        align-items: end;
+    }
+}
