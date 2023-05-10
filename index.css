@@ -234,6 +234,11 @@ select {
     color: hsl( var(--clr-white) / .25 );
 }
 
+/* Hidden attribute: the hidden attribute in HTML didn't work 
+on the picture element, but it does work with this rule added */
+[hidden] { 
+    display: none !important; }
+
 /* ------------------------------------------ */
 /*  Components                                */
 /* ------------------------------------------ */
