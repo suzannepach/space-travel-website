@@ -43,36 +43,40 @@
     <main id="main" class="grid-container grid-container--destination flow">
         <h1 class="numbered-title"><span aria-hidden="true">01</span> Pick your destination</h1>
 
-        <picture>
+        <picture id="moon-image">
             <source srcset="assets/destination/image-moon.webp" type="image/webp">
             <img src="assets/destination/image-moon.png" alt="the moon">
         </picture>
-        <picture hidden>
+        <picture hidden id="mars-image">
             <source srcset="assets/destination/image-mars.webp" type="image/webp">
             <img src="assets/destination/image-mars.png" alt="Mars">
         </picture>
-        <picture hidden>
+        <picture hidden  id="europa-image">
             <source srcset="assets/destination/image-europa.webp" type="image/webp">
             <img src="assets/destination/image-europa.png" alt="Europa">
         </picture>
-        <picture hidden>
+        <picture hidden  id="titan-image">
             <source srcset="assets/destination/image-titan.webp" type="image/webp">
             <img src="assets/destination/image-titan.png" alt="Titan">
         </picture>
       
         <div class="tab-list underline-indicators flex" role="tablist" aria-label="destination list">
             <button aria-selected="true" role="tab" aria-controls="moon-tab" class="uppercase 
-            text-accent fs-300 ff-sans-cond text-accent letter-spacing-2" tabindex="0">Moon</button>
+            text-accent fs-300 ff-sans-cond text-accent letter-spacing-2" tabindex="0" 
+            data-image="moon-image">Moon</button>
             <button aria-selected="false" role="tab" aria-controls="mars-tab" class="uppercase 
-            text-accent fs-300 ff-sans-cond text-accent letter-spacing-2" tabindex="-1">Mars</button>
+            text-accent fs-300 ff-sans-cond text-accent letter-spacing-2" tabindex="-1" 
+            data-image="mars-image">Mars</button>
             <button aria-selected="false" role="tab" aria-controls="europa-tab" class="uppercase 
-            text-accent fs-300 ff-sans-cond text-accent letter-spacing-2" tabindex="-1">Europe</button>
+            text-accent fs-300 ff-sans-cond text-accent letter-spacing-2" tabindex="-1" 
+            data-image="europa-image">Europa</button>
             <button aria-selected="false" role="tab" aria-controls="titan-tab" class="uppercase 
-            text-accent fs-300 ff-sans-cond text-accent letter-spacing-2" tabindex="-1">Titan</button>
+            text-accent fs-300 ff-sans-cond text-accent letter-spacing-2" tabindex="-1" 
+            data-image="titan-image">Titan</button>
         </div>
         
         <!-- The moon -->
-        <article class="destination-info flow" id="moon-tab" tabindex="0">
+        <article class="destination-info flow" id="moon-tab" tabindex="0" role="tabpanel">
                 <h2 class="fs-800 ff-serif uppercase">Moon</h2>
                 <p>See our planet as you’ve never seen it before. A perfect relaxing trip away to help 
                     regain perspective and come back refreshed. While you’re there, take in some history 
@@ -90,7 +94,7 @@
         </article>
 
         <!-- Mars -->
-        <article hidden class="destination-info flow" id="mars-tab" tabindex="0">
+        <article hidden class="destination-info flow" id="mars-tab" tabindex="0" role="tabpanel">
             <h2 class="fs-800 ff-serif uppercase">Mars</h2>
             <p>Don’t forget to pack your hiking boots. You’ll need them to tackle Olympus Mons, 
                 the tallest planetary mountain in our solar system. It’s two and a half times 
@@ -108,7 +112,7 @@
         </article>
 
         <!-- Europa -->
-        <article hidden class="destination-info flow" id="europa-tab" tabindex="0">
+        <article hidden class="destination-info flow" id="europa-tab" tabindex="0" role="tabpanel">
             <h2 class="fs-800 ff-serif uppercase">Europa</h2>
             <p>The smallest of the four Galilean moons orbiting Jupiter, Europa is a 
                 winter lover’s dream. With an icy surface, it’s perfect for a bit of 
@@ -127,7 +131,7 @@
         </article>
 
         <!-- Titan -->
-        <article hidden class="destination-info flow" id="titan-tab" tabindex="0">
+        <article hidden class="destination-info flow" id="titan-tab" tabindex="0" role="tabpanel">
             <h2 class="fs-800 ff-serif uppercase">Titan</h2>
             <p>The only moon known to have a dense atmosphere other than Earth, Titan 
                 is a home away from home (just a few hundred degrees colder!). As a 
