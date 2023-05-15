@@ -624,6 +624,29 @@ body {
     color: hsl( var(--clr-white) / .5 );
 }
 
+/* Technology layout */
+
+.grid-container--technology {
+    grid-template-areas: 
+        'title'
+        'image'
+        'number-indicators'
+        'content';
+    padding-inline: 0;
+    --flow-space: 2rem;
+}
+
+.grid-container--technology > * {
+    padding-inline: 1rem;
+}
+
+.grid-container--technology > picture {
+    grid-area: image;
+    max-width: 100%;
+    padding-inline: 0;
+    align-self: start;
+}
+
 @media (min-width: 35em) {
     .numbered-title {
         justify-self: start;
