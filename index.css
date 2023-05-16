@@ -151,6 +151,12 @@ select {
     --flow-space: 0.75rem;
 }
 
+@media (min-width: 35em) {
+    .flow--space-small {
+        --flow-space: 1rem;
+    }
+}
+
 .container {
     padding-inline: 2em;
     margin-inline: auto;
@@ -653,6 +659,10 @@ body {
 }
 
 @media (min-width: 35em) {
+    .grid-container > article {
+        padding-inline: 6rem;
+    }
+
     .numbered-title {
         justify-self: start;
         margin-top: 2rem;
@@ -672,6 +682,12 @@ body {
             'content'
             'dot-indicators'
             'image';
+    }
+
+    /* Technology */
+
+    .grid-container--technology {
+        --flow-space: 3.5rem;
     }
 }
 
