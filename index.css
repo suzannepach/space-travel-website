@@ -15,7 +15,7 @@
     --fs-600: 1rem;
     --fs-500: 1rem;
     --fs-400: 0.9375rem;
-    --fs-300: 1rem;
+    --fs-300: 0.875rem;
     --fs-200: 0.875rem;    
     
     /* font-families */
@@ -32,6 +32,7 @@
         --fs-600: 1.5rem;
         --fs-500: 1.25rem;
         --fs-400: 1rem;
+        --fs-300: 1rem;
     }
 }
 
@@ -625,6 +626,10 @@ body {
 }
 
 /* Technology layout */
+
+.technology {
+    align-items: start;
+}
 
 .grid-container--technology {
     grid-template-areas: 
