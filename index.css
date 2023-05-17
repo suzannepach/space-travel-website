@@ -562,6 +562,10 @@ body {
     max-width: 50ch;
 }
 
+.grid-container > article > header {
+    padding-bottom: 1rem;
+}
+
 .numbered-title {
     grid-area: title;
 }
